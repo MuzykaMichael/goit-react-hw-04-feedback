@@ -11,12 +11,18 @@ export const App =()=>{
   const [bad,setBad] = useState(0);
 
   const handleClick = ({target:{name}}) => {
-    if (name==='good') {
-      setGood(prevState=>prevState+1)
-    } else if (name==='neutral'){
-      setNeutral(prevState=>prevState+1)
-    } else if (name==='bad'){
-      setBad(prevState=>prevState+1)
+    switch(name){
+      case 'good':
+        setGood(prevState=>prevState+1)
+        break
+      case 'neutral':
+        setNeutral(prevState=>prevState+1)
+        break
+      case 'bad':
+        setBad(prevState=>prevState+1)
+        break
+      default:
+        break
     }
   }
 

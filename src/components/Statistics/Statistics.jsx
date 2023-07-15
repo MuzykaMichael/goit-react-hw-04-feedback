@@ -1,10 +1,8 @@
-import { Component } from "react";
 import { StatisticsList } from "./Statistics.styled";
 import propTypes from 'prop-types'
 
-export class Statistics extends Component {
-    render(){
-        const {good,neutral,bad,all,percentage} = this.props;
+export const Statistics = ({good,neutral,bad,all,percentage}) => {
+
         return(
             <StatisticsList>
                 <li>
@@ -24,7 +22,6 @@ export class Statistics extends Component {
                 </li>
             </StatisticsList>
         )
-    }
 }
 
 Statistics.propTypes = {

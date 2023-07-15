@@ -1,10 +1,8 @@
-import { Component } from "react";
 import propTypes from 'prop-types'
 import { ListOptionsButton } from "components/FeedbackOptions/FeedbackOptions.styled";
 
-export class ListOptionItem extends Component{
-    render(){
-        const {option,handleClick} = this.props;
+export const ListOptionItem = ({option,handleClick}) =>{
+
         return(
             <li>
                 <ListOptionsButton type='button' onClick={handleClick} name={option}>
@@ -12,7 +10,7 @@ export class ListOptionItem extends Component{
                 </ListOptionsButton>
             </li>
         )
-    }
+    
 }
 
 ListOptionItem.propTypes = {
